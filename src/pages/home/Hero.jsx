@@ -9,7 +9,7 @@ import HeroImg4 from '/Hero_images/Group 1000001510.png';
 
 const Hero = () => {
   return (
-    <section className='bg_1 pt-[200px] mb-28'>
+    <section className='bg_1 lg:pt-[200px] pt-[100px] mb-28'>
       <div className='container flex flex-col items-center relative'>
         <motion.div
           initial='hidden'
