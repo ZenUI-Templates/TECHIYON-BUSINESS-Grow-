@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url('/fonts/Gilroy-Light.woff2') format('woff2'),
+    url('/fonts/Gilroy-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url('/fonts/Gilroy-Regular.woff2') format('woff2'),
+    url('/fonts/Gilroy-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url('/fonts/Gilroy-Medium.woff2') format('woff2'),
+    url('/fonts/Gilroy-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url('/fonts/Gilroy-Bold.woff2') format('woff2'),
+    url('/fonts/Gilroy-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url('/fonts/Gilroy-Heavy.woff2') format('woff2'),
+    url('/fonts/Gilroy-Heavy.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Custom Styles for (h1 - h6), p */
+
+h1,
+h3,
+h4 {
+  @apply font-Gilory-Bold;
+}
+h5,
+p {
+  @apply font-Inter;
+}
+
+h1 {
+  @apply font-bold xl:text-[4.5em] lg:text-[4.125em] md:text-[3.125em] text-[#1E1E1E] sm:text-[2.188em] text-[1.875em] md:leading-[1em] leading-[1.2em];
+}
+h2 {
+  @apply font-Inter font-medium xl:text-[4em] lg:text-[3em] md:text-[2.5em] text-[1.875em]  text-[#2F2F2F] !leading-[1em] tracking-[-2px];
+}
+
+h3 {
+  @apply font-medium xl:text-[2.875em] lg:text-[2.188em]  text-[#1E1E1E] leading-[1.1em] md:text-[1.875em] text-[1.563em];
+}
+h4 {
+  @apply font-bold xl:text-[2.5em] lg:text-[1.875em]  text-[#35332F] text-[1.563em];
+}
+
+h5 {
+  @apply font-medium md:text-[1.125em] text-[#393939];
+}
+
+p {
+  @apply font-medium lg:text-[1.125em] text-[#3F3F3F] md:text-[1em] text-[0.938em];
+}
+
+html {
+  @apply !overflow-hidden;
+}
+
+body {
+  @apply !overflow-x-hidden;
+}
+
+/* Custom Styles for (h1 - h6), p end */
+
+::-webkit-scrollbar {
+  @apply w-[0px];
+}
+
+.text_regular {
+  @apply !text-[1em] !font-normal;
+}
+
+.text-small {
+  @apply !text-[0.938em] font-normal;
+}
+.text-extra-small {
+  @apply !text-[0.75em] font-normal;
+}
+
+.light_gray {
+  @apply text-[#A0A0A0];
+}
+.dark_gray {
+  @apply text-[#3F3F3F];
+}
+.light_gray_2 {
+  @apply text-[#C6C6C6];
+}
+.gray {
+  @apply text-[#929292];
+}
+.onyx {
+  @apply text-[#363049];
+}
+.dark_purple {
+  @apply text-[#1B1139];
+}
+
+.drop_shadow_1 {
+  -webkit-filter: drop-shadow(0px 24px 32px rgba(149, 149, 149, 0.25));
+  filter: drop-shadow(0px 24px 32px rgba(149, 149, 149, 0.25));
+}
+.shadow_1 {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.shadow_2 {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+/* CSS For Buttons  */
+.btn {
+  @apply lg:px-7 px-5 lg:py-5 py-3 xl:font-semibold font-medium font-Inter text-base rounded-md max-w-max  leading-none flex;
+}
+.primary_btn {
+  @apply bg-[#52BD95] hover:bg-[#51CBFF] transition-all duration-200 ease-linear  text-white shadow-[0px_30px_40px_-18px_#52bd9540];
+}
+
+.white_btn {
+  @apply text-[#1E1E1E] bg-white shadow-[0px_15px_55px_#0000001a];
+}
+
+.secondary_btn {
+  @apply bg-[#51CBFF] text-[#FBFBFB];
+}
+
+/* CSS FOR BACKGROUND  */
+.bg_1 {
+  @apply bg-[#F9F9FF];
+}
+
+/* STYLE FOR PRICING TABLE  */
+.pricing_table_wrappper .price::before {
+  @apply content-[''] absolute w-full h-[2px] bg-[#FF4E4E] top-1/2 -translate-y-1/2 -z-10;
+}
+
+/* STYLE FOR FAQ  */
+.accordion_wrapper .question::before {
+  @apply absolute content-[''] w-[15px] h-[2px] bg-[#1B1139] sm:top-1/2 -translate-y-1/2 top-[12px] sm:left-[-30px] left-[-25px] rounded-[100vmax];
+}
+.accordion_wrapper .question::after {
+  @apply absolute content-[''] w-[15px] h-[2px] bg-[#1B1139] sm:top-1/2 -translate-y-1/2 top-[12px] sm:left-[-30px] left-[-25px] rotate-[90deg] rounded-[100vmax] transition-all duration-200 ease-linear;
+}
+.accordion_wrapper .question.active::after {
+  @apply scale-0 opacity-0;
+}
+.accordion_wrapper .question.active::before {
+  @apply bg-[#52BD95];
+}
+
+/* HEADER  */
+header .nav_menus a,
+header .mobile_navigation ul li a {
+  @apply text-[0.875em] font-medium font-Inter text-[#5F5B80] leading-[1.8em];
+}
+
+/* FOOTER  */
+footer::before {
+  @apply bg-footer_bg absolute content-[''] bg-no-repeat top-0 right-0 size-[380px] z-10;
+}
