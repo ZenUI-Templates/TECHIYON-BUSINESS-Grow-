@@ -77,9 +77,6 @@ p {
   @apply font-medium lg:text-[1.125em] text-[#3F3F3F] md:text-[1em] text-[0.938em];
 }
 
-html {
-  @apply !overflow-hidden;
-}
 
 body {
   @apply !overflow-x-hidden;
